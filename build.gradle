@@ -28,14 +28,16 @@ dependencies {
     //selenium web driver
 	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.0.1'
 	//web driver manager 
-	compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '1.6.0'  
+	compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '1.6.0'
+	//testng
+	compile group: 'org.testng', name: 'testng', version: '6.10'
 }
 
 jar {
 	group = "com.wingdom"
 	baseName = "gandalfwines"
 	sourceCompatibility = 1.8
-	targetcompatibility = 1.8
+	targetCompatibility = 1.8
 	
 	manifest{
 		attributes "Main-Class": "com.wingdom.gandalfwines.OrderWine"
