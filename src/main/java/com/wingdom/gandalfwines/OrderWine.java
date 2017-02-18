@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.*;
 
 public class OrderWine {
 	
-	public static String driverType = "chrome";
+	public static String driverType = "firefox";
 	
 	public static String cardNumber;
 	public static String cardType;
@@ -66,7 +66,7 @@ public class OrderWine {
 			TestNG chromeTest = new TestNG();
 			chromeTest.setTestSuites(chromeFiles);
 			chromeTest.run();
-			driverType = "firefox";
+			//driverType = "firefox";
 		}else if(driverType == "firefox"){
 			firefoxFiles.add(firefoxTestXML.getAbsolutePath());
 			
