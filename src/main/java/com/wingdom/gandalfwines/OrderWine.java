@@ -57,15 +57,16 @@ public class OrderWine {
 			}
 		}//fi
 		
-		//will default to chrome for now, because driverType = chrome
-		//will add switching between the two, running both if I have enough time
-		//but the driver setup for both is done
+		//runs chrome first, after chrome runs, firefox runs. 
+		//I would like it to ask for one or the other,
+		//but that isnt implemented yet.
 		if(driverType == "chrome"){
 			chromeFiles.add(chromeTestXML.getAbsolutePath());
 			
 			TestNG chromeTest = new TestNG();
 			chromeTest.setTestSuites(chromeFiles);
 			chromeTest.run();
+			driverType = "firefox";
 		}else if(driverType == "firefox"){
 			firefoxFiles.add(firefoxTestXML.getAbsolutePath());
 			

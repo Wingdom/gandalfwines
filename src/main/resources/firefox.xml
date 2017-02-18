@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Firefox">
+	<parameter name="driverType" value="firefox"/>
+	<listeners>
+		<listener class-name="com.wingdom.gandalfwines.TestResultListener"/>
+	</listeners>
+	<test name="Happy Path">
+		<classes>
+			<class name="com.wingdom.gandalfwines.HappyPath"/>
+		</classes>
+	</test>
+</suite>
