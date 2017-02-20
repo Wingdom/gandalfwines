@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.*;
 import java.nio.file.StandardCopyOption;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import org.testng.TestNG;
 
@@ -13,8 +13,6 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.*;
-
 
 public class OrderWine {
 	
@@ -27,7 +25,7 @@ public class OrderWine {
 	public static String cardCVV;
 	public static String testURL = "http://gandalfwines.ewinerysolutions.com/";
 	
-	public static Logger logger = LoggerFactory.getLogger(OrderWine.class);
+	//public static Logger logger = LoggerFactory.getLogger(OrderWine.class);
 	
 	public static void main(String args[]){
 		
@@ -53,7 +51,8 @@ public class OrderWine {
 				java.nio.file.Files.copy(ffis, firefoxTestXML.getAbsoluteFile().toPath(), StandardCopyOption.REPLACE_EXISTING);
 				java.nio.file.Files.copy(chis, chromeTestXML.getAbsoluteFile().toPath(), StandardCopyOption.REPLACE_EXISTING);
 			}catch(IOException e){
-				OrderWine.logger.error("Couldn't copy XML files while runnig as jar", e);
+				//OrderWine.logger.error("Couldn't copy XML files while runnig as jar", e);
+				System.out.println("Could not copy XML files while running as a jar " + e);
 			}
 		}//fi
 		
@@ -74,7 +73,8 @@ public class OrderWine {
 			firefoxTest.setTestSuites(firefoxFiles);
 			firefoxTest.run();
 		}else{
-			OrderWine.logger.error("No driver type was specified, eding now");
+			//OrderWine.logger.error("No driver type was specified, eding now.");
+			System.out.println("No driver type was specified, eding now.");
 			System.exit(0);
 		}
 		
@@ -86,12 +86,12 @@ public class OrderWine {
 		WebDriver driver;
 		
 		if(driverType.equals("chrome")){
-			////new chrome driver
+			//new chrome driver
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			driver = new ChromeDriver();
 		}else{
-			//webdrivermanager firefox setup (not necessary, but replaces the built in firefox with the latest)
-			FirefoxDriverManager.getInstance().setup();
 			//new firefox driver
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
 			driver = new FirefoxDriver();
 		}
 		return driver;

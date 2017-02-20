@@ -147,23 +147,41 @@
                   <a name="buyRedWine">
                   </a> <!-- buyRedWine -->
                   <span class="method-name">buyRedWine</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: 
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: kajhd (tried for 20 second(s) with 500 MILLISECONDS interval)
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
 System info: host: &apos;MacBook-Pro-Personal-Partition.local&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161019084923, version=, platform=MAC, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=3115, browserVersion=49.0.2, platformVersion=16.4.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=darwin, device=desktop}]
-Session ID: d95baaa6-3270-3f45-bb40-1cdd0c9f48a3
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20170125094131, version=, platform=MAC, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10693, browserVersion=51.0.1, platformVersion=16.4.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=darwin}]
+Session ID: d9d52015-9ad9-bf4a-9838-54d3dfd30041
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at com.wingdom.gandalfwines.HappyPath.buyRedWine(HappyPath.java:102)
+	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:74)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .kajhd
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;MacBook-Pro-Personal-Partition.local&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20170125094131, version=, platform=MAC, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10693, browserVersion=51.0.1, platformVersion=16.4.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=darwin}]
+Session ID: d9d52015-9ad9-bf4a-9838-54d3dfd30041
+*** Element info: {Using=class name, value=kajhd}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at com.wingdom.gandalfwines.HappyPath.buyRedWine(HappyPath.java:36)
-	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:75)
-... Removed 26 stack frames
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:457)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 24 more
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -180,8 +198,8 @@ Session ID: d95baaa6-3270-3f45-bb40-1cdd0c9f48a3
                   <a name="buyWhiteWine">
                   </a> <!-- buyWhiteWine -->
                   <span class="method-name">buyWhiteWine</span>
-                  <div class="stack-trace">java.lang.Throwable: Method HappyPath.buyWhiteWine()[pri:1, instance:com.wingdom.gandalfwines.HappyPath@6979e8cb] depends on not successfully finished methods
-	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:75)
+                  <div class="stack-trace">java.lang.Throwable: Method HappyPath.buyWhiteWine()[pri:1, instance:com.wingdom.gandalfwines.HappyPath@5479e3f] depends on not successfully finished methods
+	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:74)
 ... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -191,8 +209,8 @@ Session ID: d95baaa6-3270-3f45-bb40-1cdd0c9f48a3
                   <a name="checkout">
                   </a> <!-- checkout -->
                   <span class="method-name">checkout</span>
-                  <div class="stack-trace">java.lang.Throwable: Method HappyPath.checkout()[pri:2, instance:com.wingdom.gandalfwines.HappyPath@6979e8cb] depends on not successfully finished methods
-	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:75)
+                  <div class="stack-trace">java.lang.Throwable: Method HappyPath.checkout()[pri:2, instance:com.wingdom.gandalfwines.HappyPath@5479e3f] depends on not successfully finished methods
+	at com.wingdom.gandalfwines.OrderWine.main(OrderWine.java:74)
 ... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -259,20 +277,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'buyRedWine')
 data.setCell(0, 2, 'com.wingdom.gandalfwines.HappyPath')
-data.setCell(0, 3, 37);
+data.setCell(0, 3, 32867);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkout')
+data.setCell(1, 1, 'buyWhiteWine')
 data.setCell(1, 2, 'com.wingdom.gandalfwines.HappyPath')
 data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'buyWhiteWine')
+data.setCell(2, 1, 'checkout')
 data.setCell(2, 2, 'com.wingdom.gandalfwines.HappyPath')
 data.setCell(2, 3, 0);
 window.suiteTableData['Firefox']= { tableData: data, tableDiv: 'times-div-Firefox'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 ms</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Firefox">
               </div> <!-- times-div-Firefox -->
             </div> <!-- times-div -->
@@ -307,11 +325,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">buyRedWine</span>
-                <span class="method-start">4156 ms</span>
+                <span class="method-start">4157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4194 ms</span>
+                <span class="method-start">37026 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -12,6 +12,7 @@
           <include name="setup"/>
           <include name="buyRedWine"/>
           <include name="buyWhiteWine"/>
+          <include name="tearDown"/>
           <include name="checkout"/>
         </methods>
       </class> <!-- com.wingdom.gandalfwines.HappyPath -->
